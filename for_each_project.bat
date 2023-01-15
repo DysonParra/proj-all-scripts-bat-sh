@@ -1,0 +1,39 @@
+
+@echo off
+setlocal enabledelayedexpansion
+set projectFile=.gitignore
+set actualPath=%cd%
+set filePath=%actualPath%\%projectFile%
+set firstArg="%1"
+::echo "%firstArg%"
+set args=%*
+set firstArg=%firstArg:"=%
+if not "%firstArg%" == "" (
+    ::echo First arg = "%firstArg%"
+    dir /b /s %projectFile% > out.tmp
+    FOR /F "tokens=* USEBACKQ" %%F IN (out.tmp) DO (
+        call :separate "%%F"
+        if not "%%F" == "%filePath%" (
+            ::echo "%%F"
+            set argsAux=%args%
+            call set comm=!argsAux:%%projectPath%%=project_value_path!
+            ::echo !comm!
+            set comm=!comm:project_value_path=%%F%_PATH!
+            ::echo !comm!
+            set comm=!comm:\%projectFile%_PATH=!
+            ::echo !comm!
+            call !comm!
+        )
+    )
+    cd %actualPath%
+    del "out.tmp"
+) else (
+    echo "No args specified"
+)
+::@PAUSE
+goto :EOF
+
+:separate
+set "base=%~1"
+set "left=%base:\.gitignore=" & set "right=%"
+exit /B
