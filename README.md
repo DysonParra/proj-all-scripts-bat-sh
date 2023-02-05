@@ -1,5 +1,5 @@
 # Information of the project.
-
+This repository contains various script files for do some tasks.  
 
 # update_libs_java
 Used for find all jar files with name "*-lib.jar" in the "build" folder of a project.
