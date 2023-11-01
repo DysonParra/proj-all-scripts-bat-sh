@@ -1,4 +1,4 @@
-dir /b /s *lib.jar  > out.tmp
+dir /b /s *lib-???.jar  > out.tmp
 @echo off
 setlocal enabledelayedexpansion
 
