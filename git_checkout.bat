@@ -1,21 +1,21 @@
 @echo off
-set actualPath="%cd%"
+set currentPath="%cd%"
 set gitPath="%1"
-set actualPath=%actualPath:"=%
+set currentPath=%currentPath:"=%
 set gitPath=%gitPath:"=%
-echo Actual path = "%actualPath%"
+echo Current path = "%currentPath%"
 if not "%gitPath%" == "" (
     echo Git path = "%gitPath%"
     cd "%gitPath%"
     echo New path = "%gitPath%"
 ) else (
-    echo Git path not specified using actual path
+    echo Git path not specified using current path
 )
 ::dir > out.tmp
 echo.
 echo git checkout master
 ::git checkout master
-cd "%actualPath%"
+cd "%currentPath%"
 echo.
 echo.
 echo.

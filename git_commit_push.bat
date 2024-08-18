@@ -1,19 +1,19 @@
 @echo off
-set actualPath="%cd%"
+set currentPath="%cd%"
 set messsage="%1"
 set gitPath="%2"
-set actualPath=%actualPath:"=%
+set currentPath=%currentPath:"=%
 set messsage=%messsage:"=%
 set gitPath=%gitPath:"=%
 if not "%messsage%" == "" (
-    echo Actual path = "%actualPath%"
+    echo Current path = "%currentPath%"
     echo Message = "%messsage%"
     if not "%gitPath%" == "" (
         echo Git path = "%gitPath%"
         cd "%gitPath%"
         echo New path = "%gitPath%"
     ) else (
-        echo Git path not specified using actual path
+        echo Git path not specified using current path
     )
     ::dir > out.tmp
     echo.
@@ -23,7 +23,7 @@ if not "%messsage%" == "" (
     git commit -m "%messsage%"
     echo git push
     git push
-    cd "%actualPath%"
+    cd "%currentPath%"
     echo.
     echo.
     echo.

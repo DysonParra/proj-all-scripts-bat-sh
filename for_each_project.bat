@@ -2,8 +2,8 @@
 @echo off
 setlocal enabledelayedexpansion
 set projectFile=.gitignore
-set actualPath=%cd%
-set filePath=%actualPath%\%projectFile%
+set currentPath=%cd%
+set filePath=%currentPath%\%projectFile%
 set firstArg="%1"
 ::echo "%firstArg%"
 set args=%*
@@ -25,7 +25,7 @@ if not "%firstArg%" == "" (
             call !comm!
         )
     )
-    cd %actualPath%
+    cd %currentPath%
     del "out.tmp"
 ) else (
     echo "No args specified"
