@@ -119,7 +119,7 @@ This will be expanded to the commands:
 cp -r "test-file.txt" "<ABS_PATH>/projects/c-projs/project-01-c/"  
 cp -r "test-file.txt" "<ABS_PATH>/projects/c-projs/project-02-c/"  
 cp -r "test-file.txt" "<ABS_PATH>/projects/java-projs/project-01-java/"  
-cp -r "test-file.txt" "<ABS_PATH>/projects/java-projs/project-01-java/"  
+cp -r "test-file.txt" "<ABS_PATH>/projects/java-projs/project-02-java/"  
 
 For git checkout on all projects you can use the command:  
 for_each_project.bat git_checkout.bat "%projectPath%/"  
@@ -127,7 +127,7 @@ This will be expanded to the commands:
 git_checkout.bat "<ABS_PATH>/projects/c-projs/project-01-c/"  
 git_checkout.bat "<ABS_PATH>/projects/c-projs/project-02-c/"  
 git_checkout.bat "<ABS_PATH>/projects/java-projs/project-01-java/"  
-git_checkout.bat "<ABS_PATH>/projects/java-projs/project-01-java/"  
+git_checkout.bat "<ABS_PATH>/projects/java-projs/project-02-java/"  
 
 For git commit and push on all projects you can use the command:  
 for_each_project.bat git_commit_push.bat "message" "%projectPath%/"  
@@ -135,7 +135,7 @@ This will be expanded to the commands:
 git_commit_push.bat "message" "<ABS_PATH>/projects/c-projs/project-01-c/"  
 git_commit_push.bat "message" "<ABS_PATH>/projects/c-projs/project-02-c/"  
 git_commit_push.bat "message" "<ABS_PATH>/projects/java-projs/project-01-java/"  
-git_commit_push.bat "message" "<ABS_PATH>/projects/java-projs/project-01-java/"  
+git_commit_push.bat "message" "<ABS_PATH>/projects/java-projs/project-02-java/"  
 
 
 # for_each_project_cd
