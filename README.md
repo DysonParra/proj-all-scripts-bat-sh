@@ -159,7 +159,7 @@ cd "<ABS_PATH>/projects/java-projs/project-01-java/"
 git_commit_push.bat "message"  
 cd %original_path%  
 
-cd "<ABS_PATH>/projects/java-projs/project-01-java/"  
+cd "<ABS_PATH>/projects/java-projs/project-02-java/"  
 git_commit_push.bat "message"  
 cd %original_path%  
 
