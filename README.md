@@ -1,3 +1,6 @@
+# Repository naming
+To get information of how this user is naming the repositories go [here](https://github.com/DysonParra#repository-naming)
+
 # Information of the project.
 This repository contains various script files for do some tasks.  
 
